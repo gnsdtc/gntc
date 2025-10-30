@@ -1,0 +1,27 @@
+{{ define "main" }}
+
+  {{/* Welcome / Hero Section */}}
+  {{- if .Site.Params.homeInfoParams }}
+  <section class="home-info" style="text-align:center; margin:2em auto;">
+    <h1>{{ .Site.Params.homeInfoParams.Title }}</h1>
+    <p>{{ .Site.Params.homeInfoParams.Content | markdownify }}</p>
+  </section>
+  {{- end }}
+
+  {{/* Post List Section */}}
+  {{- $pages := where (or .RegularPages .Site.RegularPages) "Section" "in" .Site.Params.mainSections }}
+  {{- if gt (len $pages) 0 }}
+  <section class="home-posts" style="max-width:720px; margin:2em auto;">
+    {{ range $pages.ByDate.Reverse }}
+      <article class="post-entry" style="margin-bottom:2em;">
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <small>{{ .Date.Format "Jan 2, 2006" }}</small>
+        <p>{{ .Summary }}</p>
+      </article>
+    {{ end }}
+  </section>
+  {{- else }}
+  <p style="text-align:center; opacity:0.6;">No posts found.</p>
+  {{- end }}
+
+{{ end }}
