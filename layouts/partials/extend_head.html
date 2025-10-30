@@ -1,0 +1,22 @@
+<!-- layouts/partials/extend_head.html -->
+{{/* 
+  This partial is loaded *inside* PaperMod's <head> 
+  so it won't override CSS or JS.
+  Use it to insert scripts or meta tags.
+*/}}
+
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MEJYQTJEY9"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-MEJYQTJEY9');
+</script>
+
+<!-- Custom meta tags -->
+<meta name="description" content="GN.TC Blog — simple, clean insights.">
+<meta name="author" content="GN.TC">
+
+<!-- Example favicon (optional) -->
+<link rel="icon" href="/favicon.ico">

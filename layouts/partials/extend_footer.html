@@ -1,0 +1,25 @@
+<!-- layouts/partials/extend_footer.html -->
+{{/* This runs after PaperMod’s footer — safe for extra links or scripts */}}
+
+<p style="text-align:center; margin-top:1rem; font-size:0.9em;">
+  <a href="/privacy-policy/">Privacy Policy</a> |
+  <a href="/terms/">Terms</a> |
+  <a href="/cookies/">Cookies</a>
+</p>
+
+<!-- Optional: consent banner -->
+<script>
+if(!localStorage.getItem('consent')) {
+  const banner = document.createElement('div');
+  banner.innerHTML = 'We use cookies for analytics and ads. <a href="/cookies/">Learn more</a>. <button>OK</button>';
+  Object.assign(banner.style, {
+    position:'fixed', bottom:0, left:0, right:0, background:'#222', color:'#fff',
+    padding:'1em', textAlign:'center', fontSize:'0.9em', zIndex:'9999'
+  });
+  banner.querySelector('button').onclick = () => {
+    localStorage.setItem('consent', 'yes');
+    banner.remove();
+  };
+  document.body.appendChild(banner);
+}
+</script>
