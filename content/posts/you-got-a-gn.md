@@ -5,7 +5,7 @@ draft: false
 tags: ["goodnight", "kindness", "connection"]
 description: "Someone just wished you good night — here’s what that means 💫"
 images: ["/images/og-you-got-a-gn.jpg"]
-summary: "Someone sent you a GN.TC — short for Good Night, Take Care. A small digital gesture that still feels human."
+summary: "Someone sent you a GN.TC — short for Good Night, Take Care."
 ---
 
 Hey there 🌙
