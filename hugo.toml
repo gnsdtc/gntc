@@ -1,4 +1,4 @@
-baseURL = 'https://gnsdtc.github.io/gntc/'
+baseURL = 'https://gn.tc'
 languageCode = 'en-us'
 title = 'GNTC Blog'
 theme = 'PaperMod'
