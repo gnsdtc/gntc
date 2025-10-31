@@ -1,6 +1,6 @@
 baseURL = 'https://gn.tc/'
 languageCode = 'en-us'
-title = 'GN.TC - Good Night Take Care 🌌✨🌙'
+title = 'GN.TC - Good Night Take Care ✨🌙'
 theme = 'PaperMod'
 
 [pagination]
